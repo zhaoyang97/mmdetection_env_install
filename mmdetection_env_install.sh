@@ -33,7 +33,8 @@ custom_channels:
 
 # 安装pytorch mmcv
 conda install pytorch cudatoolkit=10.2 torchvision -c pytorch -y
-pip install mmcv-full==latest+torch1.6.0+cu102 -f https://download.openmmlab.com/mmcv/dist/index.html
+# pip install mmcv-full==latest+torch1.6.0+cu102 -f https://download.openmmlab.com/mmcv/dist/index.html
+pip install mmcv-full
 
 # 创建环境，名为mmdetection
 conda create -n mmdetection python=3.7 -y
