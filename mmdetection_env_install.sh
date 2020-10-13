@@ -2,8 +2,9 @@
 # 解决xp上面可能出现的乱码问题
 apt-get install language-pack-zh-hans -y
 
-cd /root/userfolder
+
 # install Anaconda
+cd /root/userfolder
 wget -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2020.02-Linux-x86_64.sh
 sh Anaconda3-2020.02-Linux-x86_64.sh
 # /root/userfolder/anaconda3
@@ -11,6 +12,7 @@ echo 'export PATH=/root/userfolder/anaconda3/bin:$PATH' >> ~/.zshrc
 source ~/.zshrc
 
 # Anaconda换源
+pip install mmcv-full
 conda config
 echo 'channels:
   - defaults
@@ -31,7 +33,8 @@ custom_channels:
   simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud' >> ~/.condarc
 
 
-# 安装pytorch mmcv
+# 安装pytorch、mmcv
+cd /root/userfolder
 conda install pytorch cudatoolkit=10.2 torchvision -c pytorch -y
 # pip install mmcv-full==latest+torch1.6.0+cu102 -f https://download.openmmlab.com/mmcv/dist/index.html
 pip install mmcv-full
