@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # 解决xp上面可能出现的乱码问题
 apt-get install language-pack-zh-hans -y
